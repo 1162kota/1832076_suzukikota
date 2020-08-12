@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+  <head>
+    <meta charset="UTF-8">
+    <title>2bun-newton Method</title>
+    <link rel="stylesheet" href="2bun-newton.css">
+    <script src="nibun.js"></script>
+
+  </head>
+  <body>
+    <div id="contents">
+      <div id="panel">
+        <p>2分法の一般解</p>
+        <p><span class="h1">中点c = (𝑏𝑓(𝑎)−𝑎𝑓(𝑏))/(𝑓(𝑎)−𝑓(𝑏))</span></p>
+        <p>(ただし,𝑓(𝑎)𝑓(𝑏)<0)</p>
+        <p>cが許容誤差範囲内になるまで繰り返す</p>
+        <hr>
+        <p>ニュートン法の一般解</p>
+        <p><span class="h1">近似値b = 𝑎 −  (𝑓(𝑎))/(𝑓′(𝑎))</span></p>
+        <p>(ただしf(x) = 0)</p>
+        <p>bが許容誤差範囲内になるまで繰り返す。</p>
+        <p>許容誤差の計算</p>
+        <p><span class="h1">|𝑎 −𝑏|= ε</span></p>
+        <div id="panel2">
+          <button type="button" id="d02" class="normal" value = "start">実行</button>
+          <button type="button" id="d03" class="normal" value = "clear">初期化</button>
+          <p>aの初期値
+          <input  type="text"   id="d04" class="size" value = ""></button>
+          </p><p>bの初期値
+          <input  type="text"   id="d05" class="size" value = ""></button>
+        </p>
+        </div>
+        <p id="theory"></p>
+        <p id="answer"></p>
+      </div>
+      <div id="main">
+        <div id="area1" class="area">
+          <p>　2分法</p>
+          <hr>
+          <canvas class="myCanvas" id="graph1" width="690" height="360"></canvas>
+          <canvas class="myCanvas" id="graph1b" width="690" height="360"></canvas>
+        </div>
+
+        <div id="area2" class="area">
+          <p>　ニュートン法</p>
+          <hr>
+          <canvas class="myCanvas" id="graph2" width="690" height="360"></canvas>
+          <canvas class="myCanvas" id="graph2b" width="690" height="360"></canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+  
+</html>
+
