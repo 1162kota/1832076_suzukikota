@@ -7,6 +7,7 @@ window.addEventListener("load", () => {
  document.querySelector("#graph1b")
  );
  mui.setNumber_ui(document.querySelectorAll("#panel2 > button"));
+ mui.setNumber_ui(document.querySelectorAll("#panel2 > text"));
  mui.setResult_ui(document.querySelector("#result"));
  mui.draw_axis();
 });
@@ -42,12 +43,7 @@ class nibun_ui {
     }
 }
 class nibun { 
-  constructor(canvas) {
-    this.canvas = canvas;
-    this.ctx = canvas.getContext("2d");
-    this.times = 10000; // startボタンが押された際の打点数
-    this.all_number = 0;  // 全打点数（累積)
-    this.inside_number = 0; // 円内に入った点数(累積)
+  let a = 
   }
   next() {
     let a = 1.0;
